@@ -16,15 +16,13 @@ const PastSponsors = () => {
     { name: 'Sponsor 11', imageUrl: '/files/sponsor/interview-cake.jpg' },
     { name: 'Sponsor 12', imageUrl: '/files/sponsor/taskade.png' },
     { name: 'Sponsor 13', imageUrl: '/files/sponsor/wolfram.png' },
-
-
   ];
 
   return (
-    <Box mt="50px" mx="150px">
+    <Box mt="50px" mx="auto" px={{ base: "20px", md: "150px" }}>
       <Heading as="h2" mb="4" size="s">HISTORY</Heading>
       <Heading as="h2" mb="3" size="md">We're really proud</Heading>
-      <SimpleGrid columns={{ base: 1, md: 5 }} spacing={4}>
+      <SimpleGrid columns={{ base: 2, md: 5 }} spacing={4}> {/* Adjusted number of columns for mobile */}
         {sponsors.map((sponsor, index) => (
           <Box key={index} borderRadius="s" overflow="hidden">
             <Image src={sponsor.imageUrl} alt={sponsor.name} maxWidth="150px" maxHeight="150px" objectFit="cover" mb="3" />

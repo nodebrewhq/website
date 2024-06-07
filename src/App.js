@@ -15,6 +15,7 @@ import Sponsor from './components/PastSponsors';
 import Upcoming from './components/Upcoming';
 import GetInvolvedSection from './components/GetInvolved';
 import Footer from './components/Footer';
+import SubscriptionSection from './components/Email';
 
 function App() {
   // Define the dark theme
@@ -36,6 +37,7 @@ return (
         < GetInvolvedSection />
         < Sponsor />
         < Team />
+        < SubscriptionSection />
         < Footer />
         {/* Your other components and routes go here */}
       </Box>

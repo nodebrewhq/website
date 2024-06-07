@@ -59,40 +59,40 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Box mx="150px" mt="50">
-    <Container maxWidth="6xl">
-      <Heading size="m" fontWeight="bold" mb={18} textAlign="left">
-      </Heading>
-      {milestones.map((milestone) => (
-        <Flex key={milestone.id} mb="10px">
-          {/* Desktop view(left card) */}
-          {isDesktop && milestone.id % 2 === 0 && (
-            <>
-              <EmptyCard />
-              <LineWithDot />
-              <Card {...milestone} />
-            </>
-          )}
+    <Box mx={{ base: "0px", md: "150px" }} mt="50">
+      <Container maxWidth="6xl">
+        <Heading size="m" fontWeight="bold" mb={18} textAlign="left">
+        </Heading>
+        {milestones.map((milestone) => (
+          <Flex key={milestone.id} mb="10px">
+            {/* Desktop view(left card) */}
+            {isDesktop && milestone.id % 2 === 0 && (
+              <>
+                <EmptyCard />
+                <LineWithDot />
+                <Card {...milestone} />
+              </>
+            )}
 
-          {/* Mobile view */}
-          {isMobile && (
-            <>
-              <LineWithDot />
-              <Card {...milestone} />
-            </>
-          )}
+            {/* Mobile view */}
+            {isMobile && (
+              <>
+                <LineWithDot />
+                <Card {...milestone} />
+              </>
+            )}
 
-          {/* Desktop view(right card) */}
-          {isDesktop && milestone.id % 2 !== 0 && (
-            <>
-              <Card {...milestone} />
-              <LineWithDot />
-              <EmptyCard />
-            </>
-          )}
-        </Flex>
-      ))}
-    </Container>
+            {/* Desktop view(right card) */}
+            {isDesktop && milestone.id % 2 !== 0 && (
+              <>
+                <Card {...milestone} />
+                <LineWithDot />
+                <EmptyCard />
+              </>
+            )}
+          </Flex>
+        ))}
+      </Container>
     </Box>
   );
 };
@@ -116,13 +116,13 @@ const Card = ({ id, title, description, date }: CardProps) => {
   if (isMobile) {
     leftValue = '-15px';
     rightValue = 'unset';
-    borderWidthValue = '15px 15px 15px 0';
+    borderWidthValue = '10px 10px 10px 0';
   }
 
   return (
     <HStack
       flex={1}
-      p={{ base: 3, sm: 6 }}
+      p={{ base: 3, sm: 4 }} // Adjusted padding for mobile
       bg={useColorModeValue('gray.100', 'gray.800')}
       spacing={5}
       rounded="lg"
@@ -142,15 +142,15 @@ const Card = ({ id, title, description, date }: CardProps) => {
       }}
     >
       <Box>
-        <Text fontSize="lg" color={isEvenId ? 'teal.400' : 'blue.400'}>
+        <Text fontSize="sm" color={isEvenId ? 'teal.400' : 'blue.400'}> {/* Adjusted font size for mobile */}
           {date}
         </Text>
 
-        <VStack spacing={2} mb={3} textAlign="left">
-          <Heading as="h1" fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+        <VStack spacing={1} mb={2} textAlign="left">
+          <Heading as="h1" fontSize="md" lineHeight={1.2} fontWeight="bold" w="100%"> {/* Adjusted font size for mobile */}
             {title}
           </Heading>
-          <Text fontSize="md">{description}</Text>
+          <Text fontSize="sm">{description}</Text> {/* Adjusted font size for mobile */}
         </VStack>
       </Box>
     </HStack>
@@ -162,7 +162,7 @@ const LineWithDot = () => {
     <Flex
       pos="relative"
       alignItems="center"
-      mr={{ base: '40px', md: '40px' }}
+      mr={{ base: '30px', md: '40px' }}
       ml={{ base: '0', md: '40px' }}
     >
       <Box
@@ -192,7 +192,7 @@ const LineWithDot = () => {
 };
 
 const EmptyCard = () => {
-  return <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 6 }} bg="transparent"></Box>;
+  return <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 4 }} bg="transparent"></Box>; {/* Adjusted padding for mobile */}
 };
 
 export default Milestones;

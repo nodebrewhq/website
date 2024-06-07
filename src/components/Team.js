@@ -42,40 +42,39 @@ const teamMembers = [
 ];
 
 const TeamMember = ({ name, position, avatar, linkedin, github, website }) => (
-    <Flex
-      align="left"
-      p=""
-      mb=""
-    
-    >
-      <Avatar size="sm" src={avatar} mr="4" />
-      <Box>
-        <Heading as="h3" size="s" mb="">{name}</Heading>
-        <Text fontSize="sm" color="gray.600" mb="2">{position}</Text>
-</Box>
-</Flex>
+  <Flex
+    align="left"
+    p=""
+    mb=""
+  >
+    <Avatar size="sm" src={avatar} mr="4" />
+    <Box>
+      <Heading as="h3" size="s" mb="">{name}</Heading>
+      <Text fontSize="sm" color="gray.600" mb="2">{position}</Text>
+    </Box>
+  </Flex>
 );
 
 const MeetTheTeam = () => {
-return (
-<Box mx="150" py="10">
-  <Heading size="s" as="h2" mb="4" textAlign="left">TEAM</Heading>
-  <Heading size="md" as="h2" mb="3" textAlign="left">TEAM</Heading>
-  <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mx="">
-    {teamMembers.map((member, index) => (
-      <TeamMember
-        key={index}
-        name={member.name}
-        position={member.position}
-        avatar={member.avatar}
-        linkedin={member.linkedin}
-        github={member.github}
-        website={member.website}
-      />
-    ))}
-  </SimpleGrid>
-</Box>
-);
+  return (
+    <Box mx="auto" px={{ base: "20px", md: "150px" }} py="10"> {/* Added mx="auto" to center the box */}
+      <Heading size="s" as="h2" mb="4" textAlign="left">TEAM</Heading>
+      <Heading size="md" as="h2" mb="3" textAlign="left">TEAM</Heading>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mx="auto"> {/* Adjusted number of columns */}
+        {teamMembers.map((member, index) => (
+          <TeamMember
+            key={index}
+            name={member.name}
+            position={member.position}
+            avatar={member.avatar}
+            linkedin={member.linkedin}
+            github={member.github}
+            website={member.website}
+          />
+        ))}
+      </SimpleGrid>
+    </Box>
+  );
 }
 
 export default MeetTheTeam;
