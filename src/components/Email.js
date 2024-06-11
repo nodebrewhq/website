@@ -15,7 +15,7 @@ const SubscriptionSection = () => {
   const [state, handleSubmit] = useForm("mayrgkba"); // Replace "mayrgkba" with your actual Formspree form ID
 
   return (
-    <Box bgGradient="linear(to-b, white, gray.100)" py="50px">
+    <Box bgGradient="linear(to-b, white, gray.100)" py="50px" color="black">
       <Container maxW="8xl">
         <VStack spacing={4} textAlign="center">
           <Heading fontSize="lg" fontWeight="bold">
@@ -34,6 +34,11 @@ const SubscriptionSection = () => {
                   name="email"
                   required
                   mr={2} // Margin right to create space between input and button
+                  border="2px" // Adding border
+                  borderColor="teal.500" // Border color
+                  _hover={{ borderColor: 'teal.700' }} // Border color on hover
+                  _focus={{ borderColor: 'teal.700', boxShadow: '0 0 0 1px teal.700' }} // Border and shadow on focus
+                  _placeholder={{ color: 'black' }} // Placeholder text color
                 />
                 <Button
                   colorScheme="teal"

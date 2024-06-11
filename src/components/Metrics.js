@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 
 function MetricBox({ title, count, description, duration }) {
   return (
-    <Box p={{ base: "2", md: "4" }} borderRadius="lg" textAlign="center" m="2"> {/* Added border */}
+    <Box color="black" bg="white" p={{ base: "2", md: "4" }} borderRadius="lg" textAlign="center" m="2"> {/* Added border */}
       <Heading size="md" mb="2" fontWeight="bold">
         <CountUp end={count} duration={duration} />
       </Heading>

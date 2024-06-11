@@ -8,7 +8,6 @@ import {
   Button,
   Flex,
   Heading,
-  useColorModeValue,
   useBreakpointValue,
 } from '@chakra-ui/react';
 
@@ -17,7 +16,7 @@ const events = [
     id: 1,
     date: 'June 10, 2024',
     title: 'Brew Bridge Mentorship',
-    description: 'A 10 weeks immersvive program for hands-on programming with dedicated mentors',
+    description: 'A 10 weeks immersive program for hands-on programming with dedicated mentors',
   },
   {
     id: 2,
@@ -25,20 +24,14 @@ const events = [
     title: 'Fall of Code',
     description: 'A month-long program to explore open source technologies with live projects',
   },
-  {
-    id: 3,
-    date: 'September 15, 2024',
-    title: 'Web Development Bootcamp',
-    description: 'A week long bootcamp series where participants learn and make a project in web dev',
-  },
 ];
 
 const UpcomingEvents = () => {
   return (
     <Box bgGradient="linear(to-b, white, #F5F5F5)" py="50px">
-      <Container maxW="8xl">
-        <Heading size="s" as="h2" mb="4" textAlign="left">UPCOMING EVENTS</Heading>
-        <Heading size="md" as="h2" mb="3" textAlign="left">What we are brewing for you</Heading>
+      <Container maxW="8xl" mx={useBreakpointValue({ base: 0, lg: 150 })}> {/* Center the container */}
+        <Heading size="s" as="h2" mb="4" textAlign="left" color="black">UPCOMING EVENTS</Heading>
+        <Heading size="md" as="h2" mb="3" textAlign="left" color="black">What we are brewing for you</Heading>
         <Flex wrap="wrap" justifyContent="flex-start" spacing={4}>
           {events.map((event, index) => (
             <EventCard key={event.id} {...event} isFirst={index === 0} />
@@ -50,32 +43,45 @@ const UpcomingEvents = () => {
 };
 
 const EventCard = ({ date, title, description, isFirst }) => {
-  const cardWidth = useBreakpointValue({ base: '100%', md: '30%' }); // Adjusted width for responsiveness
-  const cardPadding = useBreakpointValue({ base: 4, md: 6 }); // Adjusted padding for responsiveness
-  const dateFontSize = useBreakpointValue({ base: 'sm', md: 'md' }); // Adjusted font size for responsiveness
-  const titleFontSize = useBreakpointValue({ base: 'md', md: 'lg' }); // Adjusted font size for responsiveness
-  const descriptionFontSize = useBreakpointValue({ base: 'sm', md: 'md' }); // Adjusted font size for responsiveness
-  const buttonSize = useBreakpointValue({ base: 'sm', md: 'md' }); // Adjusted button size for responsiveness
+  const cardWidth = useBreakpointValue({ base: '100%', md: '30%' });
+  const cardPadding = useBreakpointValue({ base: 4, md: 6 });
+  const dateFontSize = useBreakpointValue({ base: 'sm', md: 'md' });
+  const titleFontSize = useBreakpointValue({ base: 'md', md: 'lg' });
+  const descriptionFontSize = useBreakpointValue({ base: 'sm', md: 'md' });
+  const buttonSize = useBreakpointValue({ base: 'sm', md: 'md' });
+  const marginX = useBreakpointValue({ base: 0, lg: 4 }); // 0 margin on small screens, 4 on larger screens
 
   return (
     <Box 
       w={cardWidth} 
-      bg={useColorModeValue('white', 'gray.700')}
-      boxShadow="lg"
+      bg="#F5F5F5"
+      border="2px"
+      borderColor="gray.200"
+      color="black"
       rounded="lg"
       p={cardPadding}
       m={4}
-      ml={isFirst ? 0 : { base: 0, md: 4 }}
+      mx={marginX} // Apply marginX for both left and right margins
+      ml={isFirst ? 0 : marginX} // Conditional margin on the left side
       textAlign="left"
     >
-      <Text fontSize={dateFontSize} color="teal.500" mb={2}>
+      <Text fontSize={dateFontSize} color="black" mb={2}>
         {date}
       </Text>
-      <Heading as="h3" fontSize={titleFontSize} mb={2}>
+      <Heading as="h3" fontSize={titleFontSize} mb={2} color="black">
         {title}
       </Heading>
-      <Text fontSize={descriptionFontSize}>{description}</Text>
-      <Button size={buttonSize} color="White" mt="3" bg="teal.500">Register</Button> {/* Adjusted button size */}
+      <Text fontSize={descriptionFontSize} color="black">{description}</Text>
+      <Button 
+        size={buttonSize} 
+        color="white" 
+        mt="3" 
+        bg="teal.500" 
+        _hover={{ color: 'black' }}
+        w="100%" // Full width on small screens
+      >
+        Register
+      </Button>
     </Box>
   );
 };

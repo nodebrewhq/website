@@ -1,8 +1,5 @@
 import {
   ChakraProvider,
-  extendTheme,
-  useColorMode,
-  ColorModeProvider,
   Box
 } 
 from "@chakra-ui/react";
@@ -18,17 +15,10 @@ import Footer from './components/Footer';
 import SubscriptionSection from './components/Email';
 
 function App() {
-  // Define the dark theme
-const darkTheme = extendTheme({
-  config: {
-    initialColorMode: "dark",
-    useSystemColorMode: false,
-  },
-});
 
 return (
-<ChakraProvider theme={darkTheme}>
-      <Box minHeight="100vh">
+<ChakraProvider>
+      <Box minHeight="100vh" bg="white">
         <Navbar />
         <LandingPage />
         < About />

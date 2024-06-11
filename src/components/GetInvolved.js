@@ -3,7 +3,7 @@ import { Box, Heading, Text, Button, VStack, Flex } from '@chakra-ui/react';
 
 function GetInvolvedSection() {
   return (
-    <Box bg="#F5F5F5" py="50px">
+    <Box bg="#F5F5F5" py="50px" color="black">
       <Flex alignItems="center" justifyContent="center">
         <VStack spacing={6} textAlign="center" maxW="600px" mx="auto">
           <Heading size="xl" fontWeight="bold" color="gray.700">
