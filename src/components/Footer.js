@@ -3,15 +3,14 @@ import {
   Box,
   Container,
   Text,
-  Link,
   Flex,
   Divider,
+  Link,
   useBreakpointValue,
 } from "@chakra-ui/react";
 
 const Footer = () => {
   const showSections = useBreakpointValue({ base: false, md: true });
-
   return (
     <Box bg="gray.700" color="white" p={{ base: "6", md: "10" }}>
       <Container maxW="8xl">
@@ -52,8 +51,9 @@ const Footer = () => {
               <Link mt="2" fontSize="sm">
                 Contact Us
               </Link>
-              <Link mt="2" fontSize="sm">
-                Privacy Policy
+              <Link
+              mt="2" fontSize="sm">
+              Privacy Policy
               </Link>
             </Flex>
           )}

@@ -9,6 +9,7 @@ import Upcoming from './components/Upcoming';
 import GetInvolvedSection from './components/GetInvolved';
 import Footer from './components/Footer';
 import SubscriptionSection from './components/Email';
+import PrivacyPolicy from './components/Privacy';
 import theme from './theme'; // Ensure you have the theme file set up
 
 function App() {

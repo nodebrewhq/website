@@ -52,7 +52,7 @@ const Navbar = () => {
               <Link mr="4" color="black" href="/">
                 Home
               </Link>
-              <Link mr="4" color="black" href="/about">
+              <Link mr="4" color="black" href="/Privacy">
                 About
               </Link>
               <Menu>
