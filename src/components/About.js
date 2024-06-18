@@ -22,11 +22,13 @@ function AboutSection() {
         Our Story
       </Heading>
       <Text mb="4" color="black">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisi
-        vitae elit gravida rhoncus. Donec sit amet nibh nec urna dignissim
-        tempor. Quisque euismod arcu vel massa pulvinar, at ultrices elit
-        congue. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas.
+      At Nodebrew, we believe in the transformative power of technology and the importance of inclusivity within the tech community. As an international non-profit organization, our mission is to foster an inclusive environment through education and networking, providing opportunities for everyone to thrive in the tech industry.
+      <br /> <br />
+Our journey began with a simple yet powerful idea: to create spaces where underrepresented communities, particularly women, can showcase their talents and develop their skills. This vision led to the birth of our bi-yearly hackathons, including the renowned Hack Brew. Today, Hack Brew stands as India's largest all-women hackathon, empowering talented female coders to push boundaries and innovate fearlessly.
+<br /> <br />
+Nodebrew's impact extends far beyond hackathons. Over the years, we have organized three major hackathons and numerous workshops, touching the lives of over 70,000 individuals. Our events are more than just competitions; they are platforms for growth, learning, and collaboration. We aim to bridge the gender gap in technology by offering a supportive and dynamic environment where everyone can excel.
+<br /> <br />
+Innovation and community support are at the heart of Nodebrew. We are dedicated to driving meaningful change in the tech landscape by creating opportunities for individuals to connect, learn, and innovate together. Our efforts have sparked a revolution, inspiring many to pursue careers in technology and contribute to a more inclusive industry.
       </Text>
       <MetricsSection />
     </Box>
