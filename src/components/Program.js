@@ -125,8 +125,6 @@ const Card = ({ id, title, description, date }: CardProps) => {
         content: `""`,
         w: '0',
         h: '0',
-        borderColor: `transparent ${useColorModeValue('gray.100', 'gray.200')} transparent`,
-        borderStyle: 'solid',
         borderWidth: borderWidthValue,
         position: 'absolute',
         left: leftValue,

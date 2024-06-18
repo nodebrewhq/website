@@ -31,7 +31,13 @@ function LandingPage() {
               height="auto"
             />
           </Flex>
-          <Heading size="2xl" mt="10" mb="8" fontWeight="600" color="black">
+          <Heading
+            size={{ base: "xl", md: "2xl" }}
+            mt="10"
+            mb="8"
+            fontWeight="600"
+            color="black"
+          >
             <Text>
               Making tech{" "}
               <Text
@@ -49,6 +55,10 @@ function LandingPage() {
             </Text>
           </Heading>
           <Button
+            as="a"
+            href="https://chat.whatsapp.com/GorR5Pw4UsPLWuxK330aXM"
+            target="_blank"
+            rel="noopener noreferrer"
             bg="teal.400"
             mr="4"
             size="lg"

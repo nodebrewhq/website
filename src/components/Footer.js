@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 const Footer = () => {
-  const showSections = useBreakpointValue({ base: true, sm: true });
+  const showSections = useBreakpointValue({ base: false, md: true });
 
   return (
     <Box bg="gray.700" color="white" p={{ base: "6", md: "10" }}>
@@ -54,28 +54,6 @@ const Footer = () => {
               </Link>
               <Link mt="2" fontSize="sm">
                 Privacy Policy
-              </Link>
-            </Flex>
-          )}
-
-          {showSections && (
-            <Flex
-              direction="column"
-              mb={{ base: "6", md: "0" }}
-              textAlign={{ base: "center", md: "left" }}
-              flex="1"
-            >
-              <Text fontSize="lg" fontWeight="bold" mb="2">
-                Services
-              </Text>
-              <Link mt="2" fontSize="sm">
-                Web Design
-              </Link>
-              <Link mt="2" fontSize="sm">
-                Graphic Design
-              </Link>
-              <Link mt="2" fontSize="sm">
-                Digital Marketing
               </Link>
             </Flex>
           )}

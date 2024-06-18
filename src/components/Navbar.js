@@ -33,13 +33,12 @@ const Navbar = () => {
         bg="#F5F5F5"
         alignItems="center"
         justifyContent="space-between"
-        flexWrap="wrap"
         w="100%"
       >
         <Box
           mx="4"
           mb={isLargerThan768 ? "0" : "2"}
-          width={{ base: "100%", sm: "auto" }}
+          width={{ base: "auto", sm: "auto" }}
         >
           <img
             src="files/images/logo.png"
@@ -56,12 +55,9 @@ const Navbar = () => {
               <Link mr="4" color="black" href="/about">
                 About
               </Link>
-              <Link mr="4" color="black" href="/services">
-                Services
-              </Link>
               <Menu>
-                <MenuButton as={Link} bg="#F5F5F5" color="black">
-                  More
+                <MenuButton as={Link} bg="#F5F5F5" color="black" mr="4">
+                  Events
                 </MenuButton>
                 <MenuList bg="#F5F5F5">
                   <MenuItem
@@ -70,23 +66,31 @@ const Navbar = () => {
                     as={Link}
                     href="/contact"
                   >
-                    Contact
+                    Hack Brew
                   </MenuItem>
                   <MenuItem bg="#F5F5F5" color="black" as={Link} href="/faq">
-                    FAQ
+                    Brew Bridge
                   </MenuItem>
                 </MenuList>
               </Menu>
+              <Link mr="4" color="black" as="a"
+          href="mailto:hello@nodebrew.tech"
+          target="_blank"
+          rel="noopener noreferrer">
+                Contact
+              </Link>
             </Flex>
           </Box>
         ) : (
-          <IconButton
-            aria-label="Menu"
-            icon={<HamburgerIcon />}
-            onClick={toggleDrawer}
-            bg="#F5F5F5"
-            color="black"
-          />
+          <Box mx="4">
+            <IconButton
+              aria-label="Menu"
+              icon={<HamburgerIcon />}
+              onClick={toggleDrawer}
+              bg="#F5F5F5"
+              color="black"
+            />
+          </Box>
         )}
       </Flex>
 

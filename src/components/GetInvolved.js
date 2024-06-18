@@ -13,6 +13,10 @@ function GetInvolvedSection() {
             We strive to bridge the gap in technology access and education for underrepresented communities, empowering them to achieve their goals. We would love to have you and help you join build the future that you deserve.
           </Text>
           <Button
+          as="a"
+          href="https://chat.whatsapp.com/GorR5Pw4UsPLWuxK330aXM"
+          target="_blank"
+          rel="noopener noreferrer"
             colorScheme="teal"
             size="lg"
             _hover={{ transform: "scale(1.05)" }}
