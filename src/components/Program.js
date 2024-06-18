@@ -8,7 +8,7 @@ import {
   Flex,
   useColorModeValue,
   useBreakpointValue,
-  Heading, // Correct import for Heading component
+  Heading,
 } from '@chakra-ui/react';
 
 const milestones = [
@@ -47,7 +47,7 @@ const milestones = [
   },
   {
     id: 6,
-    date: 'Febraury 2024',
+    date: 'February 2024',
     title: "Flagship Hackathon: Hack Brew",
     description:
       'Nodebrew rebranded to present the best hackathon of the season-Hack Brew, with the best mentors, resources and prizes and is our flagship hackathon'
@@ -61,11 +61,10 @@ const Milestones = () => {
   return (
     <Box mx={{ base: "0px", md: "150px" }} mt="50">
       <Container maxWidth="6xl">
-        <Heading size="m" fontWeight="bold" mb={18} textAlign="left">
+        <Heading size="m" fontWeight="bold" mb={18} textAlign="left" color="gray.800">
         </Heading>
         {milestones.map((milestone) => (
           <Flex key={milestone.id} mb="10px">
-            {/* Desktop view(left card) */}
             {isDesktop && milestone.id % 2 === 0 && (
               <>
                 <EmptyCard />
@@ -73,16 +72,12 @@ const Milestones = () => {
                 <Card {...milestone} />
               </>
             )}
-
-            {/* Mobile view */}
             {isMobile && (
               <>
                 <LineWithDot />
                 <Card {...milestone} />
               </>
             )}
-
-            {/* Desktop view(right card) */}
             {isDesktop && milestone.id % 2 !== 0 && (
               <>
                 <Card {...milestone} />
@@ -105,8 +100,6 @@ interface CardProps {
 }
 
 const Card = ({ id, title, description, date }: CardProps) => {
-  // For even id show card on left side
-  // For odd id show card on right side
   const isEvenId = id % 2 == 0;
   let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px';
   let leftValue = isEvenId ? '-15px' : 'unset';
@@ -122,8 +115,8 @@ const Card = ({ id, title, description, date }: CardProps) => {
   return (
     <HStack
       flex={1}
-      p={{ base: 3, sm: 4 }} // Adjusted padding for mobile
-      bg="gray.700" // Changed background color to gray.800
+      p={{ base: 3, sm: 4 }}
+      bg={useColorModeValue('gray.100', 'gray.800')}
       spacing={5}
       rounded="lg"
       alignItems="center"
@@ -142,15 +135,14 @@ const Card = ({ id, title, description, date }: CardProps) => {
       }}
     >
       <Box>
-        <Text fontSize="sm" color={isEvenId ? 'teal.400' : 'blue.400'}> {/* Adjusted font size for mobile */}
+        <Text fontSize="sm" color={isEvenId ? 'teal.400' : 'blue.400'}>
           {date}
         </Text>
-
         <VStack spacing={1} mb={2} textAlign="left">
-          <Heading as="h1" fontSize="md" lineHeight={1.2} fontWeight="bold" w="100%"> {/* Adjusted font size for mobile */}
+          <Heading as="h1" fontSize="md" lineHeight={1.2} fontWeight="bold" w="100%" color="gray.800">
             {title}
           </Heading>
-          <Text fontSize="sm">{description}</Text> {/* Adjusted font size for mobile */}
+          <Text fontSize="sm" color="gray.800">{description}</Text>
         </VStack>
       </Box>
     </HStack>
@@ -167,7 +159,6 @@ const LineWithDot = () => {
     >
       <Box
         position="absolute"
-        bg="gray.700"
         left="50%"
         height="calc(100% + 10px)"
         border="1px solid"
@@ -183,7 +174,7 @@ const LineWithDot = () => {
           right="0"
           width="80%"
           height="100%"
-          bg="gray.700"
+          bg={useColorModeValue('gray.600', 'gray.200')}
           borderRadius="100px"
           opacity={1}
         ></Box>
@@ -193,7 +184,7 @@ const LineWithDot = () => {
 };
 
 const EmptyCard = () => {
-  return <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 4 }} bg="transparent"></Box>; {/* Adjusted padding for mobile */}
+  return <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 4 }} bg="transparent"></Box>;
 };
 
 export default Milestones;
