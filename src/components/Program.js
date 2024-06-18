@@ -61,7 +61,7 @@ const Milestones = () => {
   return (
     <Box mx={{ base: "0px", md: "150px" }} mt="50">
       <Container maxWidth="6xl">
-        <Heading size="m" fontWeight="bold" mb={18} textAlign="left" color="gray.800">
+        <Heading size="m" fontWeight="bold" mb={18} textAlign="left">
         </Heading>
         {milestones.map((milestone) => (
           <Flex key={milestone.id} mb="10px">
@@ -116,7 +116,7 @@ const Card = ({ id, title, description, date }: CardProps) => {
     <HStack
       flex={1}
       p={{ base: 3, sm: 4 }}
-      bg={useColorModeValue('gray.100', 'gray.800')}
+      bg={useColorModeValue('gray.100', 'gray.200')}
       spacing={5}
       rounded="lg"
       alignItems="center"
@@ -125,7 +125,7 @@ const Card = ({ id, title, description, date }: CardProps) => {
         content: `""`,
         w: '0',
         h: '0',
-        borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
+        borderColor: `transparent ${useColorModeValue('gray.100', 'gray.200')} transparent`,
         borderStyle: 'solid',
         borderWidth: borderWidthValue,
         position: 'absolute',
@@ -162,7 +162,7 @@ const LineWithDot = () => {
         left="50%"
         height="calc(100% + 10px)"
         border="1px solid"
-        borderColor={useColorModeValue('gray.200', 'gray.700')}
+        borderColor={useColorModeValue('gray.200', 'gray.200')}
         top="0px"
       ></Box>
       <Box pos="relative" p="10px">
