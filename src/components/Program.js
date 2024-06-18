@@ -123,7 +123,7 @@ const Card = ({ id, title, description, date }: CardProps) => {
     <HStack
       flex={1}
       p={{ base: 3, sm: 4 }} // Adjusted padding for mobile
-      bg={useColorModeValue('gray.100', 'gray.800')}
+      bg="gray.700" // Changed background color to gray.800
       spacing={5}
       rounded="lg"
       alignItems="center"
@@ -167,6 +167,7 @@ const LineWithDot = () => {
     >
       <Box
         position="absolute"
+        bg="gray.700"
         left="50%"
         height="calc(100% + 10px)"
         border="1px solid"
@@ -182,7 +183,7 @@ const LineWithDot = () => {
           right="0"
           width="80%"
           height="100%"
-          bg={useColorModeValue('gray.600', 'gray.200')}
+          bg="gray.700"
           borderRadius="100px"
           opacity={1}
         ></Box>

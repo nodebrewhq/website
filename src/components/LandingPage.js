@@ -6,7 +6,7 @@ function LandingPage() {
     <Flex bg="#F5F5F5" minHeight="100vh" alignItems="center" justifyContent="center" color="white" pb={{ base: "0", md: "50px" }}>
       <Box mb="150" textAlign="center">
         <ScaleFade initialScale={0.9} in={true}>
-          <Flex justifyContent="center"> {/* Center the image horizontally */}
+          <Flex mt="5" justifyContent="center"> {/* Center the image horizontally */}
             <Image src="files/images/header.png" alt="Header" maxW={{ base: "80%", md: "50%" }} height="auto" /> {/* Add the image */}
           </Flex>
           <Heading size="2xl" mt="10" mb="8" fontWeight="600" color="black">

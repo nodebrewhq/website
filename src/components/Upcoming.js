@@ -48,7 +48,7 @@ const EventCard = ({ date, title, description, isFirst }) => {
   const dateFontSize = useBreakpointValue({ base: 'sm', md: 'md' });
   const titleFontSize = useBreakpointValue({ base: 'md', md: 'lg' });
   const descriptionFontSize = useBreakpointValue({ base: 'sm', md: 'md' });
-  const buttonSize = useBreakpointValue({ base: 'sm', md: 'md' });
+  const buttonSize = useBreakpointValue({ base: 'sm', sm: 'sm' });
   const marginX = useBreakpointValue({ base: 0, lg: 4 }); // 0 margin on small screens, 4 on larger screens
 
   return (
