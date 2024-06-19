@@ -6,37 +6,32 @@ const teamMembers = [
   {
     name: 'Anjali Chaturvedi',
     position: 'Lead',
-    avatar: 'https://bit.ly/broken-link',
+    avatar: 'files/team/anjali.jpeg',
   },
   {
     name: 'Hasini Kanchetty',
     position: 'Program Team',
-    avatar: 'https://bit.ly/broken-link',
+    avatar: 'files/team/hasini.jpeg',
   },
   {
     name: 'Tasmiya Khan',
     position: 'Technical Team',
-    avatar: 'https://bit.ly/broken-link',
+    avatar: 'files/team/tasmiya.jpeg',
   },
   {
-    name: 'Shriya Reddy Vundhyala',
-    position: 'Marketing Team',
-    avatar: 'https://bit.ly/broken-link',
-  },
-  {
-    name: 'Priyanka Chitikela',
-    position: 'Financial Team',
-    avatar: 'https://bit.ly/broken-link',
+    name: 'Sanskruti Patke',
+    position: 'Program Team',
+    avatar: 'files/team/sanskruti.jpeg',
   },
   {
     name: 'Selorm Apeletey Mensah',
     position: 'Program Team',
-    avatar: 'https://bit.ly/broken-link',
+    avatar: 'files/team/selorm.jpeg',
   },
   {
     name: 'Sharon Wainaina',
     position: 'Program Team',
-    avatar: 'https://bit.ly/broken-link',
+    avatar: 'files/team/sharon.jpeg',
   },
   // Add more team members here
 ];
@@ -57,9 +52,9 @@ const TeamMember = ({ name, position, avatar, linkedin, github, website }) => (
 
 const MeetTheTeam = () => {
   return (
-    <Box color="black" mx="auto" px={{ base: "20px", md: "150px" }} py="10"> {/* Added mx="auto" to center the box */}
-      <Heading size="s" as="h2" mb="4" textAlign="left">TEAM</Heading>
-      <Heading size="md" as="h2" mb="3" textAlign="left">TEAM</Heading>
+    <Box mt="12" color="black" mx="auto" px={{ base: "20px", md: "150px" }} py="10"> {/* Added mx="auto" to center the box */}
+      <Heading size="s" as="h2" mb="4" textAlign="left">Our Team</Heading>
+      <Heading size="md" as="h2" mb="6" textAlign="left">Meet the people behind the change</Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mx="auto"> {/* Adjusted number of columns */}
         {teamMembers.map((member, index) => (
           <TeamMember

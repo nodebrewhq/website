@@ -12,6 +12,9 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
 
 const Footer = () => {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:hello@nodebrew.tech';
+  };
   const showSections = useBreakpointValue({ base: false, md: true });
   return (
     <Box bg="gray.700" color="white" p={{ base: "6", md: "10" }}>
@@ -50,7 +53,7 @@ const Footer = () => {
               <Link href="#about" mt="2" fontSize="sm">
                 About Us
               </Link>
-              <Link mt="2" fontSize="sm">
+              <Link mt="2" fontSize="sm" onClick={handleEmailClick}>
                 Contact Us
               </Link>
               <ChakraLink as={RouterLink} to="/privacy" mt="2" fontSize="sm">

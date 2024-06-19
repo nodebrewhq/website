@@ -2,8 +2,7 @@
 html,
 body {
   margin: 0;
-  margin-bottom: -50px;
-  padding: 0;
+    padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
   width: 100%; /* Ensure the body takes the full width of the viewport */

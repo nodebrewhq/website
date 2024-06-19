@@ -30,7 +30,7 @@ const UpcomingEvents = () => {
   return (
     <Box bgGradient="linear(to-b, white, #F5F5F5)" py="50px">
       <Container maxW="8xl" mx={useBreakpointValue({ base: 0, lg: 150 })}> {/* Center the container */}
-        <Heading size="s" as="h2" mb="4" textAlign="left" color="black">UPCOMING EVENTS</Heading>
+        <Heading size="s" as="h2" mb="4" textAlign="left" color="black">Upcoming Events</Heading>
         <Heading size="md" as="h2" mb="3" textAlign="left" color="black">What we are brewing for you</Heading>
         <Flex wrap="wrap" justifyContent="flex-start" spacing={4}>
           {events.map((event, index) => (

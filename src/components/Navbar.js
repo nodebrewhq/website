@@ -72,11 +72,11 @@ const Navbar = () => {
                     bg="#F5F5F5"
                     color="black"
                     as={Link}
-                    href="/contact"
+                    href="/"
                   >
                     Hack Brew
                   </MenuItem>
-                  <MenuItem bg="#F5F5F5" color="black" as={Link} href="/faq">
+                  <MenuItem bg="#F5F5F5" color="black" as={Link} href="/brewbridge">
                     Brew Bridge
                   </MenuItem>
                 </MenuList>
@@ -110,20 +110,35 @@ const Navbar = () => {
           <DrawerHeader borderBottomWidth="1px"></DrawerHeader>
           <DrawerBody>
             <Flex direction="column" alignItems="center">
-              <Link mb="2" color="black" href="/">
+            <Link  mr="4" color="black" href="/">
                 Home
               </Link>
-              <Link mb="2" color="black" href="/about">
+              <Link mr="4" color="black" href="#about" onClick={scrollToAbout}>
                 About
               </Link>
-              <Link mb="2" color="black" href="/services">
-                Services
-              </Link>
-              <Link mb="2" color="black" href="/contact">
+              <Menu>
+                <MenuButton as={Link} bg="#F5F5F5" color="black" mr="4">
+                  Events
+                </MenuButton>
+                <MenuList bg="#F5F5F5">
+                  <MenuItem
+                    bg="#F5F5F5"
+                    color="black"
+                    as={Link}
+                    href="/hackbrew"
+                  >
+                    Hack Brew
+                  </MenuItem>
+                  <MenuItem bg="#F5F5F5" color="black" as={Link} href="/brewbridge">
+                    Brew Bridge
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+              <Link mr="4" color="black" as="a"
+          href="mailto:hello@nodebrew.tech"
+          target="_blank"
+          rel="noopener noreferrer">
                 Contact
-              </Link>
-              <Link mb="2" color="black" href="/faq">
-                FAQ
               </Link>
             </Flex>
           </DrawerBody>

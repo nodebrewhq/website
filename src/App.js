@@ -13,6 +13,7 @@ import GetInvolvedSection from './components/GetInvolved';
 import Footer from './components/Footer';
 import SubscriptionSection from './components/Email';
 import PrivacyPolicy from './components/Privacy';
+import BrewBridge from './components/BrewBridge';
 import theme from './theme'; // Ensure you have the theme file set up
 import { Element } from 'react-scroll'; // Import Element from react-scroll
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/subscribe" element={<SubscriptionSection />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/brewbridge" element={<BrewBridge />} />
       </Routes>
       <Footer />
     </Box>
