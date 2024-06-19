@@ -20,8 +20,13 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
 import Home from './Home';
+import { scrollToElement } from './Scroll';
 
 const Navbar = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
   const [showDrawer, setShowDrawer] = useState(false);
 
@@ -55,7 +60,7 @@ const Navbar = () => {
             <Link  mr="4" color="black" href="/">
                 Home
               </Link>
-              <Link mr="4" color="black" href="/">
+              <Link mr="4" color="black" href="#about" onClick={scrollToAbout}>
                 About
               </Link>
               <Menu>

@@ -5,7 +5,7 @@ function AboutSection() {
   const bgColor = useColorModeValue("white");
 
   return (
-    <Box
+    <Box id="about"
       mt={{ base: "-50px", md: "-100px" }}
       mx={{ base: "20px", md: "150px" }}
       p={{ base: "2", md: "4" }}

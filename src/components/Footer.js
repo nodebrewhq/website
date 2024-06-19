@@ -47,7 +47,7 @@ const Footer = () => {
               <Text fontSize="lg" fontWeight="bold" mb="2">
                 Quick Links
               </Text>
-              <Link mt="2" fontSize="sm">
+              <Link href="#about" mt="2" fontSize="sm">
                 About Us
               </Link>
               <Link mt="2" fontSize="sm">
