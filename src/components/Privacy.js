@@ -9,12 +9,12 @@ import {
 const PrivacyPolicy = () => {
   return (
     <Box bg="#F5F5F5" py="12">
-      <Container maxW="container.lg" textAlign="left">
+      <Container maxW="container.lg" textAlign="left" color="gray.700">
         <Heading as="h1" size="xl" mb="6">
           Privacy Policy
         </Heading>
         <Text fontSize="lg" mb="4">
-          Last updated: [Date]
+          Last updated: June 19, 2024
         </Text>
         <Text mb="4">
           Nodebrew ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of information we receive from users of our website, events, and services (collectively, the "Services"). By using our Services, you agree to the collection and use of information in accordance with this policy.

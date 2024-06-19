@@ -8,6 +8,8 @@ import {
   Link,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ChakraLink } from '@chakra-ui/react';
 
 const Footer = () => {
   const showSections = useBreakpointValue({ base: false, md: true });
@@ -51,10 +53,9 @@ const Footer = () => {
               <Link mt="2" fontSize="sm">
                 Contact Us
               </Link>
-              <Link
-              mt="2" fontSize="sm">
-              Privacy Policy
-              </Link>
+              <ChakraLink as={RouterLink} to="/privacy" mt="2" fontSize="sm">
+  Privacy Policy
+</ChakraLink>
             </Flex>
           )}
 

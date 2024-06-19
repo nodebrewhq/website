@@ -1,4 +1,6 @@
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import React from 'react';
+import { Box } from "@chakra-ui/react";
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import About from './components/About';
@@ -14,20 +16,21 @@ import theme from './theme'; // Ensure you have the theme file set up
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box minHeight="100vh" bg="white" overflowX="hidden">
-        <Navbar />
-        <LandingPage />
-        <About />
-        <Program />
-        <Upcoming />
-        <GetInvolvedSection />
-        <Sponsor />
-        <Team />
-        <SubscriptionSection />
-        <Footer />
-      </Box>
-    </ChakraProvider>
+    <Box minHeight="100vh" bg="white" overflowX="hidden">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/program" element={<Program />} />
+        <Route path="/upcoming" element={<Upcoming />} />
+        <Route path="/get-involved" element={<GetInvolvedSection />} />
+        <Route path="/sponsors" element={<Sponsor />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/subscribe" element={<SubscriptionSection />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+      </Routes>
+      <Footer />
+    </Box>
   );
 }
 
