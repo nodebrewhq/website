@@ -38,7 +38,7 @@ const CustomPageWithGrid = () => {
 
   return (
     <Box>
-      <Flex className="grid-background" align="center" justify="center" textAlign={{ base: 'center', md: 'left' }} p={{ base: 4, md: 8 }}>
+      <Flex className="grid-background" align="center" justify="center" textAlign={{ base: 'center', md: 'center' }} p={{ base: 4, md: 8 }}>
         <Box maxW="600px" mt={20}>
           <Heading as="h1" size="2xl" mb={4} color="gray.700" lineHeight={1.2}>
             Personalized <span className="highlight">Mentorship</span> & <span className="highlight">Guidance</span> From Industry Experts
