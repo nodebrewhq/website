@@ -17,6 +17,9 @@ import {
   DrawerBody,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ChakraLink } from '@chakra-ui/react';
+import Home from './Home';
 
 const Navbar = () => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
@@ -49,10 +52,10 @@ const Navbar = () => {
         {isLargerThan768 ? (
           <Box>
             <Flex alignItems="center">
-              <Link mr="4" color="black" href="/">
+            <Link  mr="4" color="black" href="/">
                 Home
               </Link>
-              <Link mr="4" color="black" href="/Privacy">
+              <Link mr="4" color="black" href="/">
                 About
               </Link>
               <Menu>

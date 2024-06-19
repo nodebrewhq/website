@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from "@chakra-ui/react";
 import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import About from './components/About';
@@ -19,7 +20,7 @@ function App() {
     <Box minHeight="100vh" bg="white" overflowX="hidden">
       <Navbar />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/program" element={<Program />} />
         <Route path="/upcoming" element={<Upcoming />} />
