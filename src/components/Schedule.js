@@ -139,14 +139,14 @@ const events = [
     };
   
     return (
-      <Box height={{ base: '10vh', md: '90vh' }} padding={{ base: '30px', md: '0' }}>
+      <Box height={{ base: '70vh', md: '90vh' }} padding={{ base: '10px', md: '0' }}>
         {isLargerThan768 ? (
           <Calendar
             localizer={localizer}
             events={events}
             startAccessor="start"
             endAccessor="end"
-            style={{ height: isLargerThan768 ? '100%' : '10px', margin: isLargerThan768 ? '90px' : '10px' }}
+            style={{ height: '100%', margin: isLargerThan768 ? '50px' : '10px' }}
             onSelectEvent={handleSelectEvent}
             components={{
               event: Event
@@ -154,7 +154,7 @@ const events = [
             eventPropGetter={eventStyleGetter}
           />
         ) : (
-          <Text fontStyle="italic" textAlign="center" mb="-100px" color="gray.700">
+          <Text fontStyle="italic" textAlign="center" color="gray.700">
             To view the calendar, please switch to a desktop.
           </Text>
         )}
@@ -162,7 +162,7 @@ const events = [
         <Modal isOpen={!!selectedEvent} onClose={handleCloseModal} size={isLargerThan768 ? "xl" : "full"}>
           <ModalOverlay />
           {selectedEvent && (
-            <ModalContent>
+            <ModalContent backgroundColor="#3174ad" color="white">
               <ModalHeader>{selectedEvent.title}</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
@@ -185,12 +185,7 @@ const events = [
                   )}
                 </Box>
               </ModalBody>
-              <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={handleCloseModal}>
-                  Close
-                </Button>
-              </ModalFooter>
-            </ModalContent>
+             </ModalContent>
           )}
         </Modal>
       </Box>
