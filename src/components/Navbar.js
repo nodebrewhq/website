@@ -137,6 +137,9 @@ const Navbar = () => {
                   </MenuItem>
                 </MenuList>
               </Menu>
+              <Link  mr="4" color="black" href="/chapter">
+                Chapters
+              </Link>
               <Link mr="4" color="black" as="a"
           href="mailto:hello@nodebrew.tech"
           target="_blank"

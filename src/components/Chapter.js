@@ -145,7 +145,7 @@ const ChapterApplicationPage = () => {
         </Box>
         < FAQAccordion />
         <Box>
-        <Flex  mb={10} alignItems="center" justifyContent="center">
+        <Flex padding={10} alignItems="center" justifyContent="center">
             <VStack spacing={6} textAlign="center" maxW="600px" mx="auto">
               <Heading size="xl" fontWeight="bold" color="gray.700">
                 Join our <span className="highlight-green">Community</span>
