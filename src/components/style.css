@@ -1,5 +1,24 @@
 /* styles.css */
+.highlight-green {
+  position: relative;
+  display: inline-block;
+  color: rgb(68, 143, 96);
+  /* Remove the background gradient */
+  background: none;
+}
 
+/* Ensure background-color for .highlight */
+.highlight-green::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15em;
+  background-color: rgb(68, 143, 96);
+  border-radius: 20px;
+  transform: skewX(-12deg);
+}
 /* Remove fading effect */
 .highlight {
     position: relative;
