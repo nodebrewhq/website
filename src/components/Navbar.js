@@ -72,7 +72,7 @@ const Navbar = () => {
                     bg="#F5F5F5"
                     color="black"
                     as={Link}
-                    href="/"
+                    href="/hack-brew"
                   >
                     Hack Brew
                   </MenuItem>
@@ -134,7 +134,7 @@ const Navbar = () => {
                     bg="#F5F5F5"
                     color="black"
                     as={Link}
-                    href="/hackbrew"
+                    href="/hack-brew"
                   >
                     Hack Brew
                   </MenuItem>

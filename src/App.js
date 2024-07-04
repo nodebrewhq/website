@@ -15,6 +15,8 @@ import SubscriptionSection from './components/Email';
 import PrivacyPolicy from './components/Privacy';
 import BrewBridge from './components/BrewBridge';
 import ChapterApplicationForm from './components/Chapter';
+import NotFound from './components/NotFound';
+import HackBrew from './components/Hack-Brew'
 import theme from './theme'; // Ensure you have the theme file set up
 import { Element } from 'react-scroll'; // Import Element from react-scroll
 
@@ -34,7 +36,9 @@ function App() {
         <Route path="/subscribe" element={<SubscriptionSection />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/brewbridge" element={<BrewBridge />} />
+        <Route path="/hack-brew" element={<HackBrew />} />
         <Route path="/chapter" element={<ChapterApplicationForm />} />
+        <Route component={NotFound} />
       </Routes>
       <Footer />
     </Box>
