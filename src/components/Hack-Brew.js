@@ -12,7 +12,7 @@ const HackBrew = () => {
           Fuel Your <span className="highlight-t">Innovation</span> & <span className="highlight-t">Creativity</span> at Hack Brew 2.0
           </Heading>
           <Text fontSize="xl" color="gray.700" mb={8}>
-          Join us for a 48-hour hackathon where creativity meets collaboration. Empowering aspiring tech leaders with mentorship, cutting-edge resources, and the opportunity to turn your ideas into reality.
+          Join us for Nodebrew's 48-hour hackathon where creativity meets collaboration. Empowering aspiring tech leaders with mentorship, cutting-edge resources, and the opportunity to turn your ideas into reality.
           </Text>
           <Button colorScheme="orange" size="lg">
             Registration starts on 1 August
