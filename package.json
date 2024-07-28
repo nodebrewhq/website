@@ -1,7 +1,7 @@
 {
-  "name": "nodebrew.tech",
+  "name": "Nodebrew",
   "version": "0.1.0",
-  "homepage": "https://nodebrew.tech",
+  "homepage": "https://nodebrew.org",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
