@@ -13,7 +13,7 @@ import { Link as ChakraLink } from '@chakra-ui/react';
 
 const Footer = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:hello@nodebrew.tech';
+    window.location.href = 'mailto:hello@nodebrew.org';
   };
   const showSections = useBreakpointValue({ base: false, md: true });
   return (
