@@ -32,7 +32,6 @@ function App() {
         <Route path="/upcoming" element={<Upcoming />} />
         <Route path="/get-involved" element={<GetInvolvedSection />} />
         <Route path="/sponsors" element={<Sponsor />} />
-        <Route path="/team" element={<Team />} />
         <Route path="/subscribe" element={<SubscriptionSection />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/brewbridge" element={<BrewBridge />} />
